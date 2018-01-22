@@ -1,0 +1,145 @@
+@import 'var';
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-main;
+    font-size: 16px;
+}
+.row::before,
+.row::after {
+    content:"";
+    display: table ;
+    clear: both;
+}
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    padding: 5px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.big-container {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    line-height: 2;
+    font-weight: 300;
+}
+.divider {
+    height: 2px;
+    background-color: $color-pink;
+    line-height: 2px;
+    max-width: 200px;
+    margin: 30px auto;
+}
+.btn {
+    color: #fff;
+    background-color: $color-pink;
+    border: 2px solid transparent;
+    padding: 10px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 20px 0;
+    &:hover {
+        color: $color-pink;
+        background-color: #fff;
+        border-color: $color-pink;
+    }
+}
+.absolute {
+    position: absolute;
+}
+.hamburger {
+    display: none;
+}
+/*
+HEADER
+*/
+header {
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1200px;
+    background: #000 url(../img/back.jpg) no-repeat center 0/cover;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
+    nav {
+        margin-top: 40px;
+        .nav-logo {
+            display: inline-block;
+        }
+    }
+    .slogan {
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1 {
+            padding: 0 10px;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 42px;
+            span{
+                font-weight: 900;
+            }
+        }
+        p {
+            margin: 15px auto;
+            width: 90%;
+            font-size: 20px;
+        }
+        button {
+            margin-top: 40px;
+        }
+    }
+}
+.nav-top {
+    padding: 0;
+    margin: 0;
+    float: right;
+    li {
+        list-style-type: none;
+        float: left;
+        a {
+            padding: 5px 15px;
+            font-weight: 700;
+            transition: color 0.2s;
+            &:hover {
+                color: $color-pink;
+            }
+        }
+    }
+}
+@import 'rwd';
