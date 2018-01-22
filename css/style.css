@@ -226,6 +226,66 @@ ABOUT
     -webkit-transform: translate(-60px, 20px);
     transform: translate(-60px, 20px); }
 
+.services {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center; }
+  .services p {
+    color: #ed145b;
+    margin: 30px auto 80px;
+    width: 70%;
+    font-weight: 400; }
+  .services .info {
+    text-transform: uppercase; }
+  .services .img-wrap {
+    border: 2px solid #d4d4d4;
+    padding: 30px;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: 0.2s; }
+    .services .img-wrap:hover {
+      transform: scale(1.1); }
+
+.carousel {
+  min-height: 200px;
+  background: #000 url(../img/back.jpg) no-repeat center 0/cover; }
+  .carousel .container {
+    overflow: hidden;
+    padding: 0; }
+  .carousel .carousel-wrapper {
+    width: 400%; }
+    .carousel .carousel-wrapper ul {
+      padding: 0;
+      margin: 0; }
+      .carousel .carousel-wrapper ul li {
+        list-style-type: none;
+        width: 25%;
+        float: left; }
+  .carousel p {
+    padding: 150px 30px;
+    color: #fff;
+    font-size: 25px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative; }
+    .carousel p::before, .carousel p::after {
+      font-family: serif;
+      position: absolute;
+      color: #ed145b;
+      font-size: 120px;
+      left: 0;
+      right: 0; }
+    .carousel p::before {
+      content: '\201C';
+      top: -40px; }
+    .carousel p::after {
+      content: '\201D';
+      bottom: -100px; }
+
 @media (max-width: 992px) {
   .col-m-1 {
     width: 8.33%; }
@@ -272,11 +332,16 @@ ABOUT
     .about .big-photo-top {
       position: static;
       width: 100%;
+      -webkit-transform: none;
       transform: none; }
     .about h2, .about p {
       width: 100%; }
     .about .label {
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+
+  .info {
+    margin-top: 10px !important;
+    margin-bottom: 30px !important; } }
 @media (max-width: 768px) {
   .col-s-1 {
     width: 8.33%; }
@@ -338,6 +403,7 @@ ABOUT
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+    -webkit-transition: 0.2s;
     transition: 0.2s; }
     header .hamburger:hover {
       color: #fff;
@@ -355,6 +421,10 @@ ABOUT
       padding: 15px; }
 
   .about .row {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .services p:first-of-type {
+    width: 100%;
+    font-weight: 400; } }
 
 /*# sourceMappingURL=style.css.map */
