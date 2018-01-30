@@ -39,6 +39,7 @@
     .banner {
         text-align: center;
     }
+
 }
 @media (max-width: 768px) {
     .col-s-1 {width: 8.33%;}
@@ -120,6 +121,22 @@
                 width: 100%;
                 font-weight: 400;
             }
+        }
+    }
+    .news {
+        .description {
+            width: 100%;
+        }
+        .cover {
+            top: 70%;
+            transform: rotate(0);
+            i {
+                top: 2%;
+                transform: translate(-50%, 0) rotate(0);
+            }
+        }
+        .img-wrapper:hover .cover {
+            top: 70%;
         }
     }
 }
