@@ -39,6 +39,11 @@
     .banner {
         text-align: center;
     }
+    .download {
+        .divider {
+            margin: 30px auto;
+        }
+    }
 
 }
 @media (max-width: 768px) {
@@ -129,14 +134,22 @@
         }
         .cover {
             top: 70%;
+            -webkit-transform: rotate(0);
             transform: rotate(0);
             i {
                 top: 2%;
+                -webkit-transform: translate(-50%, 0) rotate(0);
                 transform: translate(-50%, 0) rotate(0);
             }
         }
         .img-wrapper:hover .cover {
             top: 70%;
+        }
+    }
+    footer {
+        .col-6 {
+            padding: 10px 0;
+            text-align: center;
         }
     }
 }

@@ -319,6 +319,7 @@ ABOUT
         background-color: #5a5a5a;
         color: #fff;
         padding: 20px;
+        -webkit-transition: background 0.3s;
         transition: background 0.3s;
         p {
             font-weight: 700;
@@ -340,6 +341,7 @@ ABOUT
                 background-color: $color-background;
                 text-transform: uppercase;
                 font-weight: 700;
+                -webkit-transform: translateY(-20px);
                 transform: translateY(-20px);
                 cursor: pointer;
                 &:hover {
@@ -434,7 +436,9 @@ ABOUT
         width: 110%;
         height: 110%;
         background-color: rgba(237,20,91,0.85);
+        -webkit-transition: top 0.3s;
         transition: top 0.3s;
+        -webkit-transform: rotate(2deg);
         transform: rotate(2deg);
         i {
             font-size: 30px;
@@ -442,8 +446,38 @@ ABOUT
             position: absolute;
             left: 50%;
             top: 50%;
+            -webkit-transform: translate(-50%, -50%) rotate(-2deg);
             transform: translate(-50%, -50%) rotate(-2deg);
             cursor: pointer;
+        }
+    }
+    .more {
+        max-width: 150px;
+        margin: 60px auto 20px;
+        text-align: center;
+        button {
+            background-color: inherit;
+            border: 0;
+            color: $color-pink;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+            &::after {
+                content: url(../img/narrow.png);
+                display: block;
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                right: 0;
+                -webkit-transition: bottom 0.5s;
+                transition: bottom 0.5s;
+                cursor: auto;
+            }
+            &:hover::after {
+                bottom: -40px;
+            }
         }
     }
 }
@@ -462,7 +496,42 @@ ABOUT
         position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+    }
+}
+.download {
+    padding: 50px 0;
+    background-color: $color-background;
+    .divider {
+        margin: 30px 0;
+    }
+    img {
+        -webkit-box-shadow: 1px 1px 20px black;
+        box-shadow: 1px 1px 20px black;
+    }
+    .col-6 {
+        padding: 30px;
+    }
+    .pull-right {
+        float: right;
+    }
+}
+footer {
+    background-color: #2b2b2b;
+    color: #fff;
+    text-transform: uppercase;
+    img {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        cursor: pointer;
+    }
+    .col-6 {
+        padding: 30px 0;
+        text-align: right;
+        &:first-of-type {
+            text-align: center;
+        }
     }
 }
 @import 'rwd';
