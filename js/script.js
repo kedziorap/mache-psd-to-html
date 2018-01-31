@@ -1,3 +1,16 @@
+//MENU
+$('#hamburger').click(function() {
+   $('.nav-top').slideToggle(300);
+});
+$(window).resize(function() {
+   if ($(window).width()>768) {
+       $('.nav-top').show();
+   } else {
+       $('.nav-top').hide();
+   }
+});
+
+//CAROUSEL
 var CONST = Object.freeze({
     interval: 5000,
     animTime: 1000,
@@ -32,7 +45,7 @@ function moveFirstSlideBack() {
     var firstItem = listCarousel.find('li:first');
     var lastItem = listCarousel.find('li:last');
     firstItem.before(lastItem);
-    listCarousel.css({marginLeft: -carousel.width()})
+    listCarousel.css({marginLeft: -carousel.width()});
 }
 function moveFirstSlide() {
     var firstItem = listCarousel.find('li:first');
