@@ -260,15 +260,34 @@ ABOUT
         padding: 0;
     }
     .carousel-wrapper {
-        width: 400%;
+        overflow: hidden;
+        position: relative;
         ul {
-            padding: 0;
             margin: 0;
+            padding: 0;
+            width: 8000px;
+            overflow: hidden;
             li {
                 list-style-type: none;
-                width: 25%;
                 float: left;
             }
+        }
+        .controls {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            margin: 0 5px;
+            padding: 0 5px; 
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%)
+        }
+        .controls:first-of-type {
+            left: 0;
+        }
+        .controls:last-of-type {
+            right: 0;
         }
     }
     p {

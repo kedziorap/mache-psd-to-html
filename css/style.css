@@ -258,14 +258,30 @@ ABOUT
     overflow: hidden;
     padding: 0; }
   .carousel .carousel-wrapper {
-    width: 400%; }
+    overflow: hidden;
+    position: relative; }
     .carousel .carousel-wrapper ul {
+      margin: 0;
       padding: 0;
-      margin: 0; }
+      width: 8000px;
+      overflow: hidden; }
       .carousel .carousel-wrapper ul li {
         list-style-type: none;
-        width: 25%;
         float: left; }
+    .carousel .carousel-wrapper .controls {
+      position: absolute;
+      font-size: 60px;
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      margin: 0 5px;
+      padding: 0 5px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .carousel .carousel-wrapper .controls:first-of-type {
+      left: 0; }
+    .carousel .carousel-wrapper .controls:last-of-type {
+      right: 0; }
   .carousel p {
     padding: 150px 30px;
     color: #fff;
